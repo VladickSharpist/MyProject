@@ -1,0 +1,20 @@
+﻿@section Style{
+
+}
+
+@section Script{
+
+}
+
+@model LoginViewModel
+
+<div class="login">
+    <span>Login</span>
+    <form action="/User/Login" method="post">
+        Login: @Html.TextBoxFor(x => x.Login)
+        Password: @Html.TextBoxFor(x => x.Password)
+        <div>
+            <input type="submit" value="Login">
+        </div>
+    </form>
+</div>

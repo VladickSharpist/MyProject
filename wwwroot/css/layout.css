@@ -1,0 +1,75 @@
+﻿.top{
+    display: flex;
+    height: 75px;
+    background: rgba(48, 48, 45, 0.90);
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+.lang-city-login{
+    display: flex;
+}
+.menu-logo{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+.menu-items{
+    display: flex;
+}
+.menu-item{
+     margin: 25px;
+ }
+.bottom{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.88);
+}
+.content{
+    min-height: calc(100vh - 75px);
+    padding-top: 75px;
+    background: url(../images/background.jpg) center/cover no-repeat;
+}
+
+.logo{
+    margin-left: 10px;
+    font-family: cursive!important;
+}
+.top .login{
+    margin: 25px;
+}
+.hide{
+    display: none;
+}
+
+.button {
+    text-decoration: none;
+    padding: 15px;
+}
+.button span {
+    display: block;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    line-height: 1;
+    transition: .4s ease;
+}
+.button:after {
+    background-image: url("../images/icons/outline_logout_white_36dp.png");
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.button:hover span {
+    max-width: 150px;
+    opacity: 1;
+    margin-right: 6px;
+}
+
+

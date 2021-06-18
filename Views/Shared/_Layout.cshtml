@@ -1,0 +1,46 @@
+﻿@using WebApplication.Service.IService
+@inject IUserService _userService
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/layout.css">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/text.css">
+    <link rel="stylesheet" href="~/css/icons.css">
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @RenderSection("Style",true)
+    @RenderSection("Script",true)
+</head>
+<div class="top">
+    <div class="menu-logo">
+        <a class="button" href="/Home/Home"><div class="logo text">.NOF</div></a>
+        <div class="menu-items">
+            <div class="menu-item text">Shop</div>
+            <div class="menu-item text">Food</div>
+            <div class="menu-item text">Resume</div>
+        </div>
+    </div>
+    @{
+        var model = new LangCityViewModel();
+        @Html.Partial("_LangCityPartial",model)
+    }
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a class="button" href="/User/Cabinet"> <div class="text">Cabinet</div></a>
+        <a class="button icon" href="/User/Logout"><span class="text">Logout</span></a>
+    }
+    else
+    {
+        <a class="button" href="/User/Login"> <div class="text">Login</div></a>
+    }
+</div>
+<body>
+<div class="content">
+    @RenderBody()
+</div>
+</body>
+<div class="bottom">
+    <div class="text">Developed by Centner</div>
+</div>
+</html>

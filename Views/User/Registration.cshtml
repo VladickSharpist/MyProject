@@ -1,0 +1,19 @@
+﻿@section Style{
+}
+
+@section Script{
+}
+@model RegistrationViewModel
+
+<div class="registration">
+    <span>Registration</span>
+    <form action="/User/Registration" method="post">
+        Login: @Html.TextBoxFor(x=>x.Login)
+        Password: @Html.TextBoxFor(x=>x.Password)
+        Phone number: @Html.TextBoxFor(x=>x.PhoneNumber)
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</div>
+
